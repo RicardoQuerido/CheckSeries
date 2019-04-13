@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To CheckSeries!</div>
+                <div class="intro-heading text-uppercase">Nice To Meet You . . .</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Login</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-12 d-flex justify-content-center text-uppercase mt-5">
+                <h1>🔥 Most Popular TV Shows right now 🔥</h1>
+            </div>
+
+
+        </div>
+        <hr>
+        <div class="row">
+            {% for show in shows %}
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>{{ show.name }}</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4 col-lg-12 d-flex justify-content-center">
+                                <img src="https://image.tmdb.org/t/p/w500/{{ show.poster_path }}"
+                                     style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="card-body col-sm-0 col-md-8 col-lg-12">
+                                <div class="p-fixed-size">
+                                    <p>
+                                        {{ show.overview }}
+                                    </p>
+                                </div>
+
+                                <div class="d-flex justify-content-end">
+                                    <a class="btn btn-primary btn-xl text-uppercase" href="#">More . . .</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
