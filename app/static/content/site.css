@@ -72,6 +72,7 @@ section h3.section-subheading {
 .btn-xl {
     font-size: 18px;
     padding: 20px 40px;
+
 }
 
 
@@ -162,8 +163,8 @@ img::-moz-selection {
     }
 
     #mainNav.navbar-shrink {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background-color: #212529;
     }
 
@@ -290,4 +291,78 @@ hr {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     margin-left: auto;
+}
+
+.form-control1 {
+    display: block;
+    width: 100%;
+    padding: .3rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-control1::-ms-expand {
+    background-color: transparent;
+    border: 0
+}
+
+.form-control1:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #fed136
+}
+
+.form-control1::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control1::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control1:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control1::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control1::placeholder {
+    color: #6c757d;
+    opacity: 1
+}
+
+.form-control1:disabled, .form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1
+}
+
+
+.form-error{
+    color:red;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+}
+
+.form-p{
+    color: #212529;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }

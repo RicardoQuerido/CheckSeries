@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+
+    <header class="masthead">
+        <div class="container d-flex justify-content-center">
+            <div style="width: 600px;
+            overflow: hidden;
+            padding-top: 150px;
+            padding-bottom: 70px">
+                <div style="background-color: white; border-radius: 5%; overflow: hidden;">
+                    <form action="." method="post">
+                        {% csrf_token %}
+                        <h2 style="background-color:black; padding-top: 40px; padding-bottom: 20px">Login</h2>
+                        <div style="margin: 30px; color: black; text-align: left">
+                            <div class="form-group">
+                                <span class="form-p">{{ form.username.label_tag }}</span>
+                                {{ form.username | add_class:"form-control1" }}
+                                <span class="form-error">{{ form.username.errors }}</span>
+                            </div>
+                            <div class="form-group">
+                                <span class="form-p">{{ form.password.label_tag }}</span>
+                                {{ form.password | add_class:"form-control1" }}
+                                <span class="form-error">{{ form.password.errors }}</span>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-center mt-5">
+                                    <input type="hidden" value="/"/>
+                                    <input type="submit" value="Login" class="btn btn-primary"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+{% endblock %}

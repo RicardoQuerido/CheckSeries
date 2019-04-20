@@ -6,14 +6,21 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To CheckSeries!</div>
-                <div class="intro-heading text-uppercase">Nice To Meet You . . .</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Login</a>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Sign Up</a>
+
+                {% if user.is_authenticated %}
+                    <div class="intro-heading text-uppercase">Hello again {{ user.username }}</div>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Log Out</a>
+                {% else %}
+                    <div class="intro-heading text-uppercase">Nice To Meet You . . .</div>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="{% url "login" %}" style="margin-right: 5px;">Login</a>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="{% url "sign_up" %}" style="margin-left: 5px;">Sign Up</a>
+                {% endif %}
+
             </div>
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row mt-5">
             <div class="col-12 d-flex justify-content-center text-uppercase mt-5">
                 <h1>🔥 Most Popular TV Shows right now 🔥</h1>
@@ -41,7 +48,7 @@
                                     </p>
                                 </div>
 
-                                <div class="d-flex justify-content-end">
+                                <div class="mt-4 d-flex justify-content-end">
                                     <a class="btn btn-primary btn-xl text-uppercase" href="#">More . . .</a>
                                 </div>
                             </div>
