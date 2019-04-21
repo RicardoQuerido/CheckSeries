@@ -19,6 +19,9 @@
                                     <span class="form-p">{{ field.label_tag }}</span>
                                     {{ field | add_class:"form-control1" }}
                                     <span class="form-error">{{ field.errors }}</span>
+                                    {% if field.name == 'email' and email_error %}
+                                        <span class="form-error"><ul><li>Email address already exists!</li></ul></span>
+                                    {% endif %}
                                 </div>
                             {% endfor %}
                             <div class="form-group">
@@ -35,4 +38,12 @@
     </header>
 
 
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('.masthead').css("background-image", "url('https://image.tmdb.org/t/p/original/s0w8JbuNNxL1YgaHeDWih12C3jG.jpg')")
+        });
+    </script>
 {% endblock %}

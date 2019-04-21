@@ -52,6 +52,11 @@
                                     class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Log Out</a>
                         </li>
                     </form>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "login" %}"><i
+                                class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Login</a>
+                    </li>
                 {% endif %}
             </ul>
 
@@ -99,6 +104,9 @@
 <script src="{% static 'scripts/popper.min.js' %}"></script>
 <script src="{% static 'scripts/bootstrap.min.js' %}"></script>
 <script src="{% static 'scripts/site.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+
 
 </body>
 </html>

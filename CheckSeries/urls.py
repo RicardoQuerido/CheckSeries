@@ -10,4 +10,5 @@ urlpatterns = [
     path('signup/', views.sign_up, name='sign_up'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('tv_show/<int:id>/', views.tv_show, name='tv_show'),
 ]
